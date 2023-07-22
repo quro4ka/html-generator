@@ -1,0 +1,18 @@
+.ButtonGroup {
+    display: inline-flex;
+    align-items: center;
+}
+
+.ButtonGroup--mode-vertical {
+    flex-direction: column;
+}
+
+.ButtonGroup--mode-horizontal {
+    flex-direction: row;
+    /* чтобы блоки не растягивались на всю высоту контейнера */
+    align-items: flex-start;
+}
+
+.ButtonGroup--gap {
+    gap: 20px;
+}

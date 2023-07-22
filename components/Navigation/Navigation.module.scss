@@ -1,0 +1,20 @@
+.list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.link {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main-color);
+    transition: var(--main-transition);
+
+    &:hover {
+        color: var(--hover-link)
+    }
+}
+
+.active {
+    color: var(--active-link);
+}
