@@ -87,7 +87,7 @@ export const HeaderTemplate = () => {
           <Button onClick={() => console.log('222')} size="s" mode="outline">
             Зарегистрироваться
           </Button>
-          <Button onClick={() => handleRoute('/template')} size="s" mode="outline">
+          <Button onClick={() => handleRoute('/template/1')} size="s" mode="outline">
             Демо
           </Button>
         </ButtonGroup>

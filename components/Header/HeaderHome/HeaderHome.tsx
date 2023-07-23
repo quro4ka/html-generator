@@ -63,7 +63,7 @@ export const HeaderHome = () => {
           <Button onClick={() => console.log('222')} size="m" mode="outline">
             Зарегистрироваться
           </Button>
-          <Button onClick={() => handleRoute('/template')} size="m" mode="outline">
+          <Button onClick={() => handleRoute('/template/1')} size="m" mode="outline">
             Демо
           </Button>
         </ButtonGroup>
