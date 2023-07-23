@@ -1,4 +1,3 @@
-import { Header } from '@/components/Header/Header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Manrope } from 'next/font/google'
@@ -6,8 +5,6 @@ import { Inter, Manrope } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 const manrope = Manrope({
   subsets: ['latin'],
-  // weight: ['300', '500', '700'],
-  // weight: ['500'],
 })
 
 export const metadata: Metadata = {
@@ -20,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={manrope.className}>
         <div className="container">
-          <Header />
+          {/* <Header /> */}
           {children}
         </div>
       </body>

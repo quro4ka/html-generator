@@ -6,6 +6,7 @@
     background-color: #fff;
     border-radius: 10px;
     padding: 10px 40px;
+    box-shadow: 0px 0px 5px #7e7e7e;
 }
 
 .left {
@@ -17,9 +18,16 @@
     margin-right: 40px;
 }
 
+ 
+
 .btns {
     display: flex;
     align-items: center;
     gap: 20px;
+
+    &__group {
+        // gap: 0px;
+        // background-color: aqua;
+    }
 }
 

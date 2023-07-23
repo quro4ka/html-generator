@@ -24,6 +24,11 @@
     --button-border-positive: rgb(60, 178, 60);
     --button-bg-hover-positive: rgb(70, 152, 70);
 
+    --button-bg-neutral: rgb(243, 243, 243);
+    --button-color-neutral: #151515;
+    --button-border-neutral: rgb(147, 147, 147);
+    --button-bg-hover-neutral: rgb(234, 234, 234);
+
     --button-transition: all .3s ease-in;
 
 }
@@ -47,6 +52,6 @@ a {
   width: 100%;
   /* max-width: 1770px; */
   padding: 20px 30px;
-  background-color: rgb(178, 137, 137);
+  /* background-color: rgb(178, 137, 137); */
   margin: 0 auto;
 }

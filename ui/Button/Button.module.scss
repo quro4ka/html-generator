@@ -1,5 +1,3 @@
-// @import './../variables.scss';
-
 .Button {
     position: relative;
     display: inline-block;
@@ -75,6 +73,16 @@
       &:hover {
         background-color: var(--button-bg-hover-positive);
       }
+    }
+
+    &.Button--appearance-neutral {
+      background-color: var(--button-bg-neutral);
+      color: #000;
+
+      &:hover {
+        // background-color: var(--button-bg-hover-positive);
+        // background-color: #000;
+      }
     } 
   }
 
@@ -95,6 +103,14 @@
     &.Button--appearance-positive {
       border: 2px solid var(--button-border-positive);
       color: var(--button-color-positive);
+      &:hover {
+        background-color: var(--gray);
+      }
+    }
+
+    &.Button--appearance-neutral {
+      border: 2px solid var(--button-border-neutral);
+      color: var(--button-color-neutral);
       &:hover {
         background-color: var(--gray);
       }

@@ -1,9 +1,9 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import styles from './Header.module.scss'
+import styles from './HeaderTemplate.module.scss'
 import cn from 'classnames'
-import { useState } from 'react'
-import { Navigation } from '../Navigation/Navigation'
+import { Navigation } from '../../Navigation/Navigation'
 import { Button } from '@/ui/Button/Button'
 import { ButtonGroup } from '@/ui/ButtonGroup/ButtonGroup'
 
@@ -24,8 +24,13 @@ const navItems = [
   },
 ]
 
-export const Header = () => {
-  const [value, setValue] = useState(111)
+export const HeaderTemplate = () => {
+  const router = useRouter()
+
+  const handleRoute = (href: string) => {
+    router.push(href)
+  }
+
   return (
     <header className={cn(styles.Header)}>
       <div className={styles.left}>
@@ -47,17 +52,42 @@ export const Header = () => {
             ></path>
           </svg>
         </Link>
-        <Navigation navLinks={navItems} />
+        <div className={styles.btns__group}>
+          <ButtonGroup gap={30} mode="horizontal" style={{ marginRight: 70 }}>
+            <Button mode="outline" appearance="neutral" onClick={() => handleRoute('/')} size="s">
+              back
+            </Button>
+            <Button
+              mode="outline"
+              appearance="neutral"
+              onClick={() => console.log('/template')}
+              size="s"
+            >
+              Выбрать шаблон
+            </Button>
+          </ButtonGroup>
+          <ButtonGroup gap={1} mode="horizontal">
+            <Button appearance="neutral" onClick={() => console.log('/template')} size="s">
+              back
+            </Button>
+            <Button appearance="neutral" onClick={() => console.log('/template')} size="s">
+              stop
+            </Button>
+            <Button appearance="neutral" onClick={() => console.log('/template')} size="s">
+              go
+            </Button>
+          </ButtonGroup>
+        </div>
       </div>
       <div className={styles.right}>
         <ButtonGroup gap={30} mode="horizontal">
-          <Button onClick={() => console.log('1111')} size="m">
+          <Button onClick={() => console.log('/template')} size="s">
             Войти
           </Button>
-          <Button onClick={() => console.log('222')} size="m" mode="outline">
+          <Button onClick={() => console.log('222')} size="s" mode="outline">
             Зарегистрироваться
           </Button>
-          <Button onClick={() => console.log('as')} size="m" mode="outline">
+          <Button onClick={() => handleRoute('/template')} size="s" mode="outline">
             Демо
           </Button>
         </ButtonGroup>
