@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 import { initialTemplate } from '@/app/template/[id]/initialTemplate'
 import styles from './Template.module.scss'
+import { Button } from '@/ui/Button/Button'
 
 export default function Template() {
   const [disabled, setDisabled] = useState(true)
@@ -22,17 +23,11 @@ export default function Template() {
         init={{
           height: 500,
           menubar: false,
-          plugins: [
-            'advlist autolink lists link image charmap print preview anchor',
-            'searchreplace visualblocks code fullscreen',
-            'insertdatetime media table paste code help wordcount',
-          ],
+          plugins:
+            'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons',
 
           toolbar:
-            'undo redo | formatselect | ' +
-            'bold italic backcolor | alignleft aligncenter ' +
-            'alignright alignjustify | bullist numlist outdent indent | ' +
-            'removeformat | help',
+            'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
           content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
         }}
         apiKey={'745nxz674zp1tjq87dtp5chw08yzhrnkcckjsjhu76jms6i7'}
@@ -41,7 +36,7 @@ export default function Template() {
         disabled={disabled}
         inline
       />
-      <button onClick={toggleDisabled}>{disabled ? 'Enable Editor' : 'Disable Editor'}</button>
+      <Button onClick={toggleDisabled}>{disabled ? 'Enable Editor' : 'Disable Editor'}</Button>
       <textarea
         style={{ width: '100%', height: '200px' }}
         value={data}

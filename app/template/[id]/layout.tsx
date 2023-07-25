@@ -7,7 +7,7 @@ export default function TemplateLayout({ children }: { children: React.ReactNode
     <div>
       <HeaderTemplate />
       <div className={styles.main}>
-        <SideBar />
+        {/* <SideBar /> */}
         <div className={styles.layout}>{children}</div>
       </div>
     </div>
